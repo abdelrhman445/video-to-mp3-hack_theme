@@ -1,148 +1,127 @@
-# 🚀 NeoDownload v3.0.0 – Ultimate Video & Audio Downloader
+<div align="center" style="background:#0d0d0d;padding:30px;border-radius:22px;border:1px solid #222;">
 
-![Version](https://img.shields.io/badge/Version-3.0.0-blueviolet?style=for-the-badge)
-![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platforms-YouTube%20|%20TikTok%20|%20Instagram%20|%20Facebook-blue?style=for-the-badge)
+<img src="https://i.imgur.com/U8y7F3T.gif" width="180" />
 
-![Banner](https://media.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif)
+# ⚡ NeoDownload API  
+### Advanced Anime x Hacker Edition
 
----
+</div>
 
-## 🎨 Overview
-NeoDownload is a **modern and hacker-inspired** video/audio downloader.  
-It supports multiple platforms and gives you **super fast conversions** with a sleek, animated UI.
+<div align="center">
 
-- 💽 Download videos & extract audio (MP3)  
-- 🎬 Multi-platform support: YouTube, TikTok, Instagram, Facebook  
-- ⚡ Ultra-fast conversion with **yt-dlp + ffmpeg**  
-- 🌐 Responsive & animated interface  
-- 🔒 Secure & safe (auto cleaning temp files, URL validation)
+A modern, powerful, high‑speed API for downloading **videos, audio, playlists**  
+from YouTube and multiple other platforms — built with **Node.js + yt‑dlp**  
+with a clean hacker-themed frontend UI.
 
----
+<br>
 
-## ✨ Features
+<img src="https://i.imgur.com/jSxP4FL.gif" width="620" style="border-radius:14px;" />
 
-| Feature | Description |
-|---------|-------------|
-| 🎧 Audio Extraction | Convert videos to MP3 up to 320kbps |
-| 🎥 Video Download | Download in multiple resolutions |
-| ⚡ Speed | Optimized for maximum download speed |
-| 🔒 Security | URL sanitization + prevent traversal attacks |
-| 🌐 Platforms | YouTube, TikTok, Instagram, Facebook, Twitter |
-| 🎨 UI | Animated terminal-style interface with neon effects |
+</div>
 
 ---
 
-## 📁 Project Structure
+## 🚀 Features
+
+- Ultra‑fast video/audio downloading  
+- MP3 / M4A / MP4 / WEBM support  
+- Full metadata extraction  
+- Playlist support  
+- Clean hacker‑dark UI  
+- Reliable, stable backend  
+- Works on any hosting or VPS  
+
+---
+
+## 📦 Project Structure
 
 ```
 NeoDownload/
-├── server.js           # Main Node.js server
-├── package.json
-├── README.md
-├── api/
-│   ├── index.js        # API router
-│   ├── download.js     # Download & conversion logic
-│   └── utils.js        # Helper functions
-└── public/
-    ├── index.html      # Frontend page
-    ├── style.css       # CSS with animations & themes
-    └── app.js          # Frontend JS logic
+│── server.js
+│── package.json
+│── /api
+│     ├── index.js
+│     ├── video.js
+│     ├── audio.js
+│     └── formats.js
+│── /public
+│     ├── index.html
+│     ├── style.css
+│     └── app.js
 ```
 
 ---
 
-## 🧪 API Endpoints
+## 🔧 Installation
+
+```bash
+git clone https://github.com/your-user/neo-download.git
+cd neo-download
+npm install
+```
+
+Install yt-dlp:
+
+```bash
+npm run setup
+```
+
+Start:
+
+```bash
+npm start
+```
+
+---
+
+## 📡 API Routes
 
 ### Get Video Info
 ```
 GET /api/info?url=VIDEO_URL
 ```
 
-### Download Audio
-```
-GET /api/audio?url=VIDEO_URL
-```
-
 ### Download Video
 ```
-GET /api/video?url=VIDEO_URL
+GET /api/video?url=VIDEO_URL&quality=1080p
 ```
 
-### Direct Download
+### Download Audio
 ```
-GET /api/download?url=VIDEO_URL
+GET /api/audio?url=VIDEO_URL&format=mp3
 ```
 
 ---
 
-## 🚀 Installation
+## 🖥️ UI Preview
+
+<div align="center">
+<img src="https://i.imgur.com/klJExb3.gif" width="700" style="border-radius:14px;" />
+</div>
+
+---
+
+## 🧪 Example Request
 
 ```bash
-# Clone repo
-git clone https://github.com/yourusername/NeoDownload.git
-cd NeoDownload
-
-# Install dependencies
-npm install
-
-# Make sure ffmpeg & yt-dlp are installed
-# Windows
-winget install yt-dlp
-winget install ffmpeg
-
-# Linux
-sudo apt install ffmpeg
-sudo curl -L https://yt-dlp.org/downloads/latest/yt-dlp -o /usr/local/bin/yt-dlp
-sudo chmod +x /usr/local/bin/yt-dlp
-
-# Start server
-npm start
+curl "http://localhost:3000/api/video?url=https://youtu.be/dQw4w9WgXcQ&quality=720p"
 ```
 
-Frontend: [http://localhost:3000](http://localhost:3000)  
-API: [http://localhost:3000/api](http://localhost:3000/api)
+---
+
+## 📸 Screenshots
+
+<div align="center">
+<img src="https://i.imgur.com/8RB8pFR.jpeg" width="420" style="border-radius:12px;" />
+<img src="https://i.imgur.com/QqPZm08.gif" width="420" style="border-radius:12px;" />
+</div>
 
 ---
 
-## 🎨 UI Preview
+## 👤 Developer  
+**NullSpecter (AbdUlrahman Elsayed)**  
+Cyber Security Specialist • Full Stack Developer  
 
-![Preview](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
-
-Animated terminal-style interface with **neon effects, scanlines, and interactive tabs**.  
-Responsive for all devices.
-
----
-
-## 🛡 Security
-
-- Input validation & sanitization  
-- Anti-SSRF & directory traversal protection  
-- Auto-clean temporary files  
-- Optional rate-limiting  
-
----
-
-## ⚠ Troubleshooting
-
-- ❌ yt-dlp not installed → run `npm run install-ytdlp`  
-- ❌ ffmpeg missing → run `npm install ffmpeg-static`  
-- ❌ Timeout → increase timeout in `download.js`
-
----
-
-## 📜 License
-
-MIT License – Free to use, modify & distribute
-
----
-
-## 👤 Author
-
-**AbdUlrahman Elsayed – NullSpecter**  
-Cyber Security Expert & Full-Stack Developer
-
----
-
-![Footer GIF](https://media.giphy.com/media/3o7aD6t0sJZlL9w6R2/giphy.gif)
+<div align="center">
+<img src="https://i.imgur.com/AdSFb2j.gif" width="170" />
+</div>
