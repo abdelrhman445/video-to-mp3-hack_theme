@@ -1,71 +1,72 @@
 ██████████████████████████████████████████████████████████████
 ███                ⚠ NEO DOWNLOAD v3.0.0 ⚠                 ███
-███      THE DARK PORTAL FOR VIDEO → MP3 / MP4 CONVERSION   ███
-███               Built for Hackers • Devs • Power Users     ███
+███        THE DARK PORTAL FOR VIDEO → MP3 / MP4 TOOL        ███
+███            Built for Hackers • Developers • Power Users   ███
 ██████████████████████████████████████████████████████████████
 
 ===============================================================
 🔥 OVERVIEW
 ===============================================================
-NEO DOWNLOAD هو نظام اختراق بصري (Hacker-Themed System) كامل
-يتيح لك تنزيل الفيديوهات والصوت من جميع المنصات:
-YouTube - TikTok - Facebook - Instagram - Twitter
+NEO DOWNLOAD is a full Hacker-Themed system designed to download
+and convert videos & audio from all major platforms:
 
-• سرعة وحشية  
-• جودة عالية  
-• تصميم غرفة عمليات هاكرز  
-• API كامل محترم  
-• معالجة ذكية للأخطاء  
-• واجهة فخمة متوافقة مع جميع الأجهزة
+YouTube • TikTok • Facebook • Instagram • Twitter
 
-===============================================================
-🔥 FEATURES (النسخة المظلّمة)
-===============================================================
-✔ اختراق الفيديو (Video Inspect) والحصول على كل المعلومات  
-✔ تحويل صوت MP3 لغاية 320kbps  
-✔ استخراج فيديو بجودات متعددة (144p → 1080p)  
-✔ دعم تلقائي لكل المنصات  
-✔ Auto Format Detector  
-✔ نظام حماية ضد الروابط المزيفة  
-✔ حذف الملفات المؤقتة بشكل تلقائي  
-✔ Logs كاملة لوضع التطوير  
+• Ultra-fast speed  
+• High-quality output  
+• Hacker Command Center UI  
+• Full professional API  
+• Smart error handling  
+• Responsive dark interface  
 
 ===============================================================
-📁 PROJECT STRUCTURE (خريطة النظام)
+🔥 FEATURES
+===============================================================
+✔ Video info extraction  
+✔ Convert to MP3 up to 320kbps  
+✔ Download MP4 in multiple qualities (144p → 1080p)  
+✔ Auto platform detection  
+✔ Auto format analyzer  
+✔ Security validation for links  
+✔ Auto-clearing temporary files  
+✔ Developer debug logs  
+
+===============================================================
+📁 PROJECT STRUCTURE
 ===============================================================
 NeoDownload/
 │
-├── server.js              ← الخادم الرئيسي
+├── server.js              ← Main server  
 ├── package.json
 ├── README.md
 │
 ├── api/
-│   ├── index.js           ← نقطة تجميع كل API
-│   ├── download.js        ← نظام التحميل والتحويل
-│   └── utils.js           ← أدوات الخصائص المتقدمة
+│   ├── index.js           ← API router  
+│   ├── download.js        ← Video/Audio handler  
+│   └── utils.js           ← Helper functions  
 │
 └── public/
-    ├── index.html         ← واجهة الهاكرز
-    ├── style.css          ← تصميم النيون الأخضر / الأسود
-    └── app.js             ← تشغيل الواجهة وطلب الـ API
+    ├── index.html         ← Hacker UI  
+    ├── style.css          ← Black + Neon Green theme  
+    └── app.js             ← Frontend logic  
 
 ===============================================================
-🧪 API ENDPOINTS (نسخة المطورين)
+🧪 API ENDPOINTS
 ===============================================================
-▶ GET VIDEO INFO
+▶ GET VIDEO INFO  
     GET /api/info?url=
 
-▶ DOWNLOAD MP3
+▶ DOWNLOAD MP3  
     GET /api/audio?url=
 
-▶ DOWNLOAD VIDEO (MP4)
+▶ DOWNLOAD MP4 VIDEO  
     GET /api/video?url=
 
-▶ DIRECT DOWNLOAD
+▶ DIRECT DOWNLOAD  
     GET /api/download?url=
 
 ===============================================================
-🛠 INSTALLATION (التنصيب الكامل)
+🛠 INSTALLATION
 ===============================================================
 # 1. Clone:
 git clone https://github.com/yourusername/NeoDownload.git
@@ -85,53 +86,50 @@ Linux:
     sudo curl -L https://yt-dlp.org/downloads/latest/yt-dlp -o /usr/local/bin/yt-dlp
     sudo chmod +x /usr/local/bin/yt-dlp
 
-# 4. Run:
+# 4. Run server:
 npm start
 
 📡 API:       http://localhost:3000/api  
 🎨 Frontend:  http://localhost:3000  
 
 ===============================================================
-🎨 USER INTERFACE (HACKER UI)
+🎨 HACKER UI
 ===============================================================
-✔ شاشة داكنة بالكامل  
-✔ تأثير Matrix Rain  
-✔ نيون أخضر وحواف حمراء  
-✔ موجّه أوامر زائف (Fake Terminal Log)  
-✔ شاشة تحليل الرابط  
-✔ عرض صورة الفيديو + العنوان + المدة  
-✔ مؤثرات CSS رهيبة: blinking, scan-lines, noise  
+✔ Full black terminal UI  
+✔ Matrix-style animation  
+✔ Green neon highlights  
+✔ Fake terminal logs  
+✔ Auto video preview  
+✔ Clean responsive layout  
+✔ Scan-line + glitch FX  
 
 ===============================================================
-🛡 SECURITY & HARDENING
+🛡 SECURITY
 ===============================================================
-• Sanitization لكل الروابط  
-• منع SSRF  
-• منع Directory Traversal  
-• فحص البروتوكول (HTTP/S فقط)  
-• رصد وتسجيل الأخطاء  
-• حذف الملفات المؤقتة كل 60 ثانية  
-• Rate Limiting (اختياري)
+• URL sanitization  
+• Anti-SSRF protection  
+• Prevent directory traversal  
+• Protocol validation (HTTP/HTTPS only)  
+• Error logging system  
+• Auto remove temp files  
+• Optional rate limiting  
 
 ===============================================================
 ⚠ TROUBLESHOOTING
 ===============================================================
-❌ yt-dlp غير مثبت  
-→ الحل:  
-    npm run install-ytdlp أو تثبيته يدويًا
+❌ yt-dlp not installed  
+→ Solution: Install via winget or curl
 
-❌ ffmpeg Missing  
-→ الحل:  
-    npm install ffmpeg-static
+❌ ffmpeg missing  
+→ Solution: npm install ffmpeg-static
 
-❌ Timeout  
-→ الحل:  
-    زد قيمة timeout داخل download.js
+❌ Timeout errors  
+→ Solution: Increase timeout in download.js
 
 ===============================================================
 📜 LICENSE
 ===============================================================
-MIT License — Free to modify & distribute.
+MIT License — Free to use, modify and distribute.
 
 ===============================================================
 👤 AUTHOR
