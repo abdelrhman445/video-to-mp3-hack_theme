@@ -1,191 +1,50 @@
-```markdown
-# 🕳️👁️ البوابة المظلمة – Dark Portal Converter  
-## **غرفة تحكم سرّيـة لتحويل الفيديو إلى MP3 بجودة خارقة**
+<div style="
+  background:#000;
+  color:#0f0;
+  padding:25px;
+  border-radius:12px;
+  font-family:Consolas, monospace;
+  font-size:16px;
+  line-height:1.6;
+  white-space:pre-wrap;
+">
+🚀 YOUTUBE & VIDEO DOWNLOAD API  
+--------------------------------------
+✔ Fast API  
+✔ Supports YouTube / Facebook / Instagram  
+✔ Auto Format Detection  
+✔ Audio/Video Extraction  
+✔ ffmpeg + yt-dlp Integrated  
+✔ JSON Response  
+✔ Error Handling System  
+✔ High-speed Processing
 
-![Version](https://img.shields.io/badge/Version-3.0.0-darkred?style=for-the-badge)
-![Node](https://img.shields.io/badge/Node.js-18%2B-black?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-STABLE-green?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platforms-YT%20%7C%20FB%20%7C%20IG%20%7C%20TT-purple?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Enhanced-black?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge)
+📁 PROJECT STRUCTURE
+--------------------------------------
+/api
+   ├── index.js
+   ├── download.js
+   ├── utils.js
+/frontend
+   ├── index.html
+   ├── style.css
+   ├── app.js
+/server.js
+/package.json
 
----
+🔧 ENDPOINTS:
+--------------------------------------
+GET  /api/info?url=
+GET  /api/audio?url=
+GET  /api/video?url=
+GET  /api/download?url=
 
-## 👁️ مقدمة
-**البوابة المظلمة** هو مشروع ويب مصمم ليبدو كأنك داخل  
-غرفة تحكّم Hackers مظلمة ذات أضواء خضراء، خطوط خفيفة،  
-وتأثيرات Glitch تجعل التجربة مرعبة ومبهرة في نفس الوقت.
-
-يوفر لك النظام:
-- استخراج الصوت من أي فيديو
-- دعم منصات متعددة
-- تحويل MP3 بجودة تصل إلى 320kbps
-- واجهة احترافية + API قوية
-- نظام أمان حقيقي يراقب كل طلب
-
----
-
-## ✨ مميزات البوابة المظلمة
-### 🎧 تحويل صوتي مذهل
-- استخراج MP3 عالي الجودة  
-- دعم **YouTube, Facebook, Instagram, TikTok**  
-- معالجة سريعة جدًا بفضل ffmpeg + yt-dlp  
-- إزالة الملفات المؤقتة تلقائيًا
-
-### 💀 واجهة Cyber-Horror مرعبة
-- خلفية سوداء + ضباب أحمر + خطوط Matrix  
-- مؤثرات اهتزاز + Noise + Shadow Pulse  
-- أزرار متحركة بأسلوب Military UI  
-- لوحة تحكم تشبه شاشات الـHackOps
-
-### ⚡ أداء سريع كالبرق
-- Multi-threading خلف الكواليس  
-- Smart Caching  
-- استخدام ffmpeg-static لتقليل المشاكل
-
-### 🔒 أمان مُعزّز
-- منع الروابط المشبوهة  
-- Sanitizing لكل المدخلات  
-- فلترة URL  
-- منع Path Traversal  
-- مراقبة الاستهلاك + Rate Limit
-
----
-
-## 🛠️ التقنيات المستخدمة
-
-### Backend
-- **Node.js (Express.js)**
-- **yt-dlp** (لاستخراج الفيديو)
-- **fluent-ffmpeg + ffmpeg-static**
-- **CORS / Morgan / Body-Parser**
-
-### Frontend
-- HTML5 / CSS3 / JavaScript  
-- مؤثرات Glitch + Scanlines  
-- واجهة Hacker Terminal
-
----
-
-## 🗂️ هيكل المشروع
-
-```
-dark-portal-converter/
-│
-├── app.js                 # الخادم الرئيسي
-├── downloader.js          # منطق التحويل
-├── install-ytdlp.js       # مُثبت yt-dlp
-│
-├── routes/
-│   └── download.js        # API المسؤولة عن التحميل
-│
-├── public/
-│   ├── index.html         # واجهة الهكرز
-│   ├── style.css          # التصميم المخيف
-│   └── script.js          # إدارة الواجهة
-│
-├── temp/                  # ملفات يتم حذفها تلقائياً
-└── README.md
-```
-
----
-
-## ⚡ طريقة التثبيت
-
-### 1️⃣ نسخ المشروع
-```bash
-git clone https://github.com/YOUR-USERNAME/dark-portal-converter.git
-```
-
-### 2️⃣ دخول المجلد
-```bash
-cd dark-portal-converter
-```
-
-### 3️⃣ تثبيت البكجات
-```bash
-npm install
-```
-
-### 4️⃣ تثبيت yt-dlp تلقائيًا
-```bash
-npm run install-ytdlp
-```
-
-### 5️⃣ تشغيل الإعدادات
-```bash
-npm run setup
-```
-
-### 6️⃣ تشغيل الخادم
-```bash
-npm start
-```
-
-ثم افتح:
-```
-http://localhost:3000
-```
-
----
-
-## 🔌 واجهة API
-
-### 🔍 جلب معلومات الفيديو
-```http
-POST /api/info
-{
-  "url": "VIDEO_URL"
-}
-```
-
-### 🎧 بدء التحويل
-```http
-POST /api/download
-{
-  "url": "VIDEO_URL",
-  "quality": "320"
-}
-```
-
-### 🟢 حالة الخادم
-```http
-GET /api/status
-```
-
-### 📡 المنصات المدعومة
-```http
-GET /api/platforms
-```
-
----
-
-## 🧪 المشاكل الشائعة
-
-### yt-dlp غير مثبت
-```bash
-npm run install-ytdlp
-```
-
-### ffmpeg غير موجود
-```bash
-npm install ffmpeg-static
-```
-
-### الفيديو لا يعمل؟
-- تأكد أن الرابط صحيح  
-- أعد تشغيل الخادم  
-- ربما المنصة بها حماية
-
----
-
-## ⚠️ تحذير
-هذا المشروع للأغراض التعليمية فقط.  
-لا تستخدمه لتنزيل أي محتوى عليه حقوق نشر.
-
----
-
-## 👁️ رسالة من البوابة…
-> *"احذر… كل رابط تمرره عبر البوابة يتم تسجيله.  
-من يعبر الظلام… لا يعود كما كان."*
-```
+🎨 FRONTEND STYLE  
+--------------------------------------
+• Black hacker theme  
+• Reactive terminal interface  
+• Neon green highlights  
+• Responsive layout  
+• Animated loading  
+• Command-center control panel vibe  
+</div>
