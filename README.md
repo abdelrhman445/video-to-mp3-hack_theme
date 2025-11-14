@@ -1,7 +1,7 @@
 ██████████████████████████████████████████████████████████████
-███                ⚠ NEO DOWNLOAD v3.0.0 ⚠                 ███
-███        THE DARK PORTAL FOR VIDEO → MP3 / MP4 TOOL        ███
-███            Built for Hackers • Developers • Power Users   ███
+███                ⚠ NEO DOWNLOAD v3.0.0 ⚠                ███
+███        THE DARK PORTAL FOR VIDEO → MP3 / MP4 TOOL      ███
+███       Built for Hackers • Developers • Power Users     ███
 ██████████████████████████████████████████████████████████████
 
 ===============================================================
