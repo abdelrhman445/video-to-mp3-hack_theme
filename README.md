@@ -1,140 +1,142 @@
 ██████████████████████████████████████████████████████████████
-███                ⚠ NEO DOWNLOAD v3.0.0 ⚠                ███
-███        THE DARK PORTAL FOR VIDEO → MP3 / MP4 TOOL      ███
-███       Built for Hackers • Developers • Power Users     ███
+███                   ⚠ NEO DOWNLOAD v3.0.0 ⚠              ███
+███         THE DARK PORTAL FOR VIDEO → MP3/MP4 TOOL         ███
+███          Built for Hackers • Devs • Power Users          ███
 ██████████████████████████████████████████████████████████████
 
 ===============================================================
 🔥 OVERVIEW
 ===============================================================
-NEO DOWNLOAD is a full Hacker-Themed system designed to download
-and convert videos & audio from all major platforms:
+NeoDownload is a hacker-themed video downloader and converter.
+It allows you to extract audio and download video from major platforms:
 
-YouTube • TikTok • Facebook • Instagram • Twitter
+• YouTube • TikTok • Facebook • Instagram • Twitter
 
-• Ultra-fast speed  
-• High-quality output  
-• Hacker Command Center UI  
-• Full professional API  
-• Smart error handling  
-• Responsive dark interface  
+Features:
+- Ultra-fast processing
+- High-quality MP3 up to 320kbps
+- Multi-quality video download (144p → 1080p+)
+- Smart auto format detection
+- Hacker UI terminal-style interface
+- API fully functional & stable
+- Responsive design for all devices
 
 ===============================================================
 🔥 FEATURES
 ===============================================================
-✔ Video info extraction  
-✔ Convert to MP3 up to 320kbps  
-✔ Download MP4 in multiple qualities (144p → 1080p)  
-✔ Auto platform detection  
-✔ Auto format analyzer  
-✔ Security validation for links  
-✔ Auto-clearing temporary files  
-✔ Developer debug logs  
+✔ Video info extraction
+✔ Audio MP3 download
+✔ Video MP4 download
+✔ Cross-platform support
+✔ Auto format detection
+✔ Security validation for links
+✔ Auto-clearing temp files
+✔ Developer-friendly debug logs
 
 ===============================================================
 📁 PROJECT STRUCTURE
 ===============================================================
 NeoDownload/
 │
-├── server.js              ← Main server  
+├── server.js              ← Main Express server
 ├── package.json
 ├── README.md
 │
 ├── api/
-│   ├── index.js           ← API router  
-│   ├── download.js        ← Video/Audio handler  
-│   └── utils.js           ← Helper functions  
+│   ├── index.js           ← API router
+│   ├── download.js        ← Video/audio handler
+│   └── utils.js           ← Helper functions
 │
 └── public/
-    ├── index.html         ← Hacker UI  
-    ├── style.css          ← Black + Neon Green theme  
-    └── app.js             ← Frontend logic  
+    ├── index.html         ← Hacker-style frontend
+    ├── style.css          ← Black + neon green theme
+    └── app.js             ← Frontend logic
 
 ===============================================================
 🧪 API ENDPOINTS
 ===============================================================
-▶ GET VIDEO INFO  
-    GET /api/info?url=
+▶ GET VIDEO INFO
+GET /api/info?url=
 
-▶ DOWNLOAD MP3  
-    GET /api/audio?url=
+▶ DOWNLOAD AUDIO (MP3)
+GET /api/audio?url=
 
-▶ DOWNLOAD MP4 VIDEO  
-    GET /api/video?url=
+▶ DOWNLOAD VIDEO (MP4)
+GET /api/video?url=
 
-▶ DIRECT DOWNLOAD  
-    GET /api/download?url=
+▶ DIRECT FILE DOWNLOAD
+GET /api/download?url=
 
 ===============================================================
 🛠 INSTALLATION
 ===============================================================
-# 1. Clone:
+# 1. Clone the repo
 git clone https://github.com/yourusername/NeoDownload.git
 cd NeoDownload
 
-# 2. Install dependencies:
+# 2. Install dependencies
 npm install
 
-# 3. Install yt-dlp + ffmpeg:
+# 3. Install yt-dlp + ffmpeg
 
 Windows:
-    winget install yt-dlp
-    winget install ffmpeg
+winget install yt-dlp
+winget install ffmpeg
 
 Linux:
-    sudo apt install ffmpeg
-    sudo curl -L https://yt-dlp.org/downloads/latest/yt-dlp -o /usr/local/bin/yt-dlp
-    sudo chmod +x /usr/local/bin/yt-dlp
+sudo apt install ffmpeg
+sudo curl -L https://yt-dlp.org/downloads/latest/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod +x /usr/local/bin/yt-dlp
 
-# 4. Run server:
+# 4. Run server
 npm start
 
-📡 API:       http://localhost:3000/api  
-🎨 Frontend:  http://localhost:3000  
+Server ready:
+📡 API:       http://localhost:3000/api
+🎨 Frontend:  http://localhost:3000
 
 ===============================================================
 🎨 HACKER UI
 ===============================================================
-✔ Full black terminal UI  
-✔ Matrix-style animation  
-✔ Green neon highlights  
-✔ Fake terminal logs  
-✔ Auto video preview  
-✔ Clean responsive layout  
-✔ Scan-line + glitch FX  
+✔ Full dark terminal UI
+✔ Matrix-style animation
+✔ Neon green highlights
+✔ Fake terminal logs
+✔ Video preview + info
+✔ Responsive & clean layout
+✔ Scanline & glitch effects
 
 ===============================================================
 🛡 SECURITY
 ===============================================================
-• URL sanitization  
-• Anti-SSRF protection  
-• Prevent directory traversal  
-• Protocol validation (HTTP/HTTPS only)  
-• Error logging system  
-• Auto remove temp files  
-• Optional rate limiting  
+• URL sanitization
+• Anti-SSRF
+• Directory traversal protection
+• Protocol validation (HTTP/HTTPS)
+• Error logging system
+• Auto remove temp files
+• Optional rate limiting
 
 ===============================================================
 ⚠ TROUBLESHOOTING
 ===============================================================
-❌ yt-dlp not installed  
-→ Solution: Install via winget or curl
+❌ yt-dlp not installed
+→ Install via winget or curl
 
-❌ ffmpeg missing  
-→ Solution: npm install ffmpeg-static
+❌ ffmpeg missing
+→ npm install ffmpeg-static
 
-❌ Timeout errors  
-→ Solution: Increase timeout in download.js
+❌ Timeout errors
+→ Increase timeout in download.js
 
 ===============================================================
 📜 LICENSE
 ===============================================================
-MIT License — Free to use, modify and distribute.
+MIT License — Free to use, modify, and distribute.
 
 ===============================================================
 👤 AUTHOR
 ===============================================================
-Developed By: AbdUlrahman Elsayed  
-Alias: NullSpecter  
-Cyber Security Engineer & Full-Stack Developer  
+AbdUlrahman Elsayed – NullSpecter
+Cyber Security Engineer & Full-Stack Developer
 ██████████████████████████████████████████████████████████████
