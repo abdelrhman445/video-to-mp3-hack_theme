@@ -1,0 +1,33 @@
+{
+  "name": "video-to-mp3-api",
+  "version": "3.0.0",
+  "description": "API متطور لتحميل الفيديو من يوتيوب وتحويله إلى MP3 باستخدام yt-dlp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "setup": "node setup.js",
+    "install-ytdlp": "node install-ytdlp-simple.js",
+    "test": "node test.js",
+    "update": "npm install ytdl-core@latest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "youtube",
+    "download",
+    "mp3",
+    "converter",
+    "api",
+    "yt-dlp"
+  ],
+  "author": "MP3 Converter",
+  "license": "MIT"
+}

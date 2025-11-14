@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول الفيديو إلى MP3 - البوابة المظلمة</title>
+    <meta name="description" content="ادخل إلى البوابة المظلمة لتحويل أي فيديو إلى ملف MP3">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- عناصر الخلفية المرعبة -->
+    <div class="background-elements">
+        <!-- عيون متحركة -->
+        <div class="floating-eyes" style="top: 10%; left: 5%;"></div>
+        <div class="floating-eyes" style="top: 30%; left: 80%;"></div>
+        <div class="floating-eyes" style="top: 70%; left: 20%;"></div>
+        <div class="floating-eyes" style="top: 85%; left: 70%;"></div>
+        
+        <!-- قطرات دم -->
+        <div class="blood-drips" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="blood-drips" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="blood-drips" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="blood-drips" style="left: 70%; animation-delay: 1s;"></div>
+        <div class="blood-drips" style="left: 90%; animation-delay: 3s;"></div>
+        
+        <!-- وجوه مرعبة خفية -->
+        <div class="scary-face" style="top: 15%; left: 15%;">👁️</div>
+        <div class="scary-face" style="top: 25%; left: 75%;">💀</div>
+        <div class="scary-face" style="top: 65%; left: 25%;">👹</div>
+        <div class="scary-face" style="top: 75%; left: 85%;">👻</div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>البوابة المظلمة</h1>
+                <p>ادخل إلى العالم السفلي لتحويل مقاطع الفيديو إلى أصوات مسموعة من عالم آخر</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- لوحة التحكم الرئيسية -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-skull-crossbones"></i> أدخل رابط الفيديو</h2>
+                    <p>ادخل الرابط الذي تريد تحويله من عالم الأحياء إلى عالم الأموات</p>
+                </div>
+
+                <div class="input-group">
+                    <div class="url-input-container">
+                        <input 
+                            type="url" 
+                            id="videoUrl" 
+                            placeholder="https://www.youtube.com/watch?v=..." 
+                            required
+                        >
+                        <button id="pasteBtn" class="paste-btn" title="لصق الرابط">
+                            <i class="fas fa-paste"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="quality-selector">
+                        <label>جودة الصوت:</label>
+                        <div class="selector-wrapper">
+                            <select id="quality">
+                                <option value="320">عالية (320kbps)</option>
+                                <option value="256">جيدة (256kbps)</option>
+                                <option value="192">متوسطة (192kbps)</option>
+                                <option value="128">قياسية (128kbps)</option>
+                            </select>
+                            <div class="selector-arrow">▼</div>
+                        </div>
+                    </div>
+
+                    <button id="getInfoBtn" class="btn btn-primary">
+                        <i class="fas fa-ghost"></i>
+                        <span>جلب معلومات الفيديو</span>
+                    </button>
+                </div>
+
+                <div class="supported-platforms">
+                    <h3>المنصات المدعومة:</h3>
+                    <div class="platforms-grid" id="platformsList">
+                        <div class="platform-tag">YouTube</div>
+                        <div class="platform-tag">Facebook</div>
+                        <div class="platform-tag">Instagram</div>
+                        <div class="platform-tag">TikTok</div>
+                        <div class="platform-tag">Twitter</div>
+                        <div class="platform-tag">SoundCloud</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لوحة معلومات الفيديو -->
+            <div id="videoInfo" class="panel hidden">
+                <div class="panel-header">
+                    <h2><i class="fas fa-eye"></i> معلومات الفيديو</h2>
+                    <p>تم الكشف عن معلومات الفيديو من العالم الآخر</p>
+                </div>
+                <div class="info-card">
+                    <div class="thumbnail-container">
+                        <img id="thumbnail" src="" alt="صورة الفيديو">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="info-content">
+                        <h3 id="videoTitle"></h3>
+                        <div class="meta-grid">
+                            <div class="meta-item">
+                                <span class="meta-icon"><i class="fas fa-clock"></i></span>
+                                <span class="meta-label">المدة:</span>
+                                <span id="videoDuration" class="meta-value"></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon"><i class="fas fa-tv"></i></span>
+                                <span class="meta-label">المنصة:</span>
+                                <span id="videoPlatform" class="meta-value"></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon"><i class="fas fa-user"></i></span>
+                                <span class="meta-label">الناشر:</span>
+                                <span id="videoAuthor" class="meta-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="downloadBtn" class="btn btn-download">
+                    <i class="fas fa-download"></i>
+                    <span>بدء عملية التحويل</span>
+                </button>
+            </div>
+
+            <!-- لوحة التحميل -->
+            <div id="loading" class="panel hidden">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p>جاري استحضار الصوت من العالم الآخر...</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="progress-text">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لوحة النتائج -->
+            <div id="result" class="panel hidden">
+                <div class="result-content">
+                    <div class="success-animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 id="resultMessage"></h3>
+                    <div class="file-info">
+                        <div class="info-row">
+                            <span class="info-label">حجم الملف:</span>
+                            <span id="fileSize" class="info-value"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">مدة الصوت:</span>
+                            <span id="fileDuration" class="info-value"></span>
+                        </div>
+                    </div>
+                    <a id="downloadLink" class="btn btn-download-link" href="#" download>
+                        <i class="fas fa-file-download"></i>
+                        <span>تحميل الملف</span>
+                    </a>
+                    <p class="download-note">سيتم حذف الملف تلقائياً بعد 30 ثانية</p>
+                </div>
+            </div>
+
+            <!-- لوحة الأخطاء -->
+            <div id="error" class="panel hidden">
+                <div class="error-content">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 id="errorMessage"></h3>
+                    <button class="btn btn-retry" onclick="hideError()">
+                        <i class="fas fa-redo"></i>
+                        <span>إعادة المحاولة</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 البوابة المظلمة - جميع الحقوق محفوظة للعالم السفلي</p>
+                <div class="server-status">
+                    <span>حالة الخادم:</span>
+                    <span id="serverStatus" class="status-indicator">● جاري الفحص...</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- رسائل مخيفة عشوائية -->
+    <div id="creepyMessage" class="creepy-message hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
